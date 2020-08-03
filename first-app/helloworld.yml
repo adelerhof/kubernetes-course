@@ -7,7 +7,14 @@ metadata:
 spec:
   containers:
   - name: k8s-demo
-    image: wardviaene/k8s-demo
+    image: adelerhof/docker-demo
     ports:
     - name: nodejs-port
       containerPort: 3000
+    resources:
+      # requests:
+      #   memory: "64Mi"
+      #   cpu: "250m"
+      limits:
+        memory: "64Mi"
+        cpu: "100m"
